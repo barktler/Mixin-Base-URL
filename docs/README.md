@@ -15,6 +15,18 @@ yarn add @barktler/mixin-base-url
 npm install @barktler/mixin-base-url --save
 ```
 
+## Usage
+
+```ts
+import { createBaseURLMixin } from "@barktler/mixin-base-url";
+import { YourAPI } from "somewhere";
+
+const api: YourAPI = new YourAPI();
+api.useMixin(createBaseURLMixin({
+    baseURL: 'https://api.example.com',
+}));
+```
+
 ## Documents
 
 See [Barktler Documents](//barktler.com).
