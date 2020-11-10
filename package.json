@@ -1,0 +1,43 @@
+{
+  "name": "@barktler/mixin-base-url",
+  "version": "1.0.0",
+  "description": ":fish: Base URL Mixin for Barktler",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barktler/Mixin-Base-URL.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barktler/Mixin-Base-URL/issues"
+  },
+  "homepage": "https://github.com/barktler/Mixin-Base-URL#readme",
+  "peerDependencies": {
+    "@barktler/core": "*"
+  },
+  "devDependencies": {
+    "@barktler/core": "2.7.0",
+    "@barktler/driver-mock": "^3.0.1",
+    "@sudoo/io": "^1.8.0",
+    "@sudoo/pattern": "^1.6.1",
+    "@sudoo/triforce": "^2.9.7"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "sourceMap": true
+  }
+}

@@ -6,3 +6,15 @@
 [![downloads](https://img.shields.io/npm/dm/@barktler/mixin-base-url.svg)](https://www.npmjs.com/package/@barktler/mixin-base-url)
 
 :fish: Base URL Mixin for Barktler
+
+## Install
+
+```sh
+yarn add @barktler/mixin-base-url
+# Or
+npm install @barktler/mixin-base-url --save
+```
+
+## Documents
+
+See [Barktler Documents](//barktler.com).
