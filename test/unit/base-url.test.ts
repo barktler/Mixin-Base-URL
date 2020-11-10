@@ -5,6 +5,7 @@
  * @override Unit
  */
 
+import { IRequestConfig } from "@barktler/core";
 import { expect } from "chai";
 import * as Chance from "chance";
 import { createBaseURLMixin } from "../../src";
@@ -16,6 +17,7 @@ describe('Given [createBaseURLMixin] function', (): void => {
 
     it('should be able to modify base url', async (): Promise<void> => {
 
+        let requestUrl: string | undefined;
         const url: string = chance.string();
 
         const api: ExampleAPI = new ExampleAPI(url);
@@ -23,8 +25,13 @@ describe('Given [createBaseURLMixin] function', (): void => {
             beaeURL: 'https://',
         }));
 
+        api.preHook.sideEffect.add((data: IRequestConfig) => {
+            requestUrl = data.url;
+        });
+
         const response: ExampleAPIResponse = await api.fetch();
 
         expect(typeof response.hello).to.be.equal('string');
+        expect(requestUrl).to.be.equal(`https://${url}`);
     });
 });
