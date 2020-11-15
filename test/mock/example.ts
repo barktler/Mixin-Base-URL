@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace Debug_Log
+ * @namespace Base_URL
  * @description Example
  * @override Mock
  */
